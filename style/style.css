@@ -1,17 +1,224 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 3 | @import "./utils/animations";
- *   |         ^^^^^^^^^^^^^^^^^^^^
- *   '
- *   main.scss 3:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 3 \2502  @import \"./utils/animations\";\a   \2502          ^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   main.scss 3:9  root stylesheet";
+.animation {
+  box-shadow: rgb(188, 113, 236) 0px 0px 30px 1px;
+  border-radius: 50px;
+  background: rgba(197, 143, 233, 0.5);
+  margin: 3rem 4rem;
+  border: 1px solid rgba(197, 143, 233, 0.2);
+  min-height: 50px;
+  width: 90vw;
+  position: relative;
 }
+.animation__ball {
+  width: 50px;
+  height: 50px;
+  background: rgb(247, 189, 214);
+  border-radius: 50px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  animation: ball linear 2.5s both infinite;
+}
+
+@keyframes ball {
+  0% {
+    transform: translateX(0%) scaleX(1) scaleY(1);
+  }
+  5% {
+    transform: translateX(-50%) scaleX(0.5) scaleY(2);
+  }
+  10% {
+    transform: translateX(465%) scaleX(1) scaleY(1);
+  }
+  25% {
+    transform: translateX(1550%) scaleX(2.5) scaleY(0.2);
+  }
+  40% {
+    transform: translateX(2635%) scaleX(1) scaleY(1);
+  }
+  45% {
+    transform: translateX(3150%) scaleX(0.5) scaleY(2);
+  }
+  50% {
+    transform: translateX(3100%) scaleX(1) scaleY(1);
+  }
+  55% {
+    transform: translateX(3150%) scaleX(0.5) scaleY(2);
+  }
+  60% {
+    transform: translateX(2635%) scaleX(1) scaleY(1);
+  }
+  75% {
+    transform: translateX(1550%) scaleX(2.5) scaleY(0.2);
+  }
+  85% {
+    transform: translateX(465%) scaleX(1) scaleY(1);
+  }
+  90% {
+    transform: translateX(-50%) scaleX(0.5) scaleY(2);
+  }
+  100% {
+    transform: translateX(0%) scaleX(1) scaleY(1);
+  }
+}
+@keyframes ballv2 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% - 3rem);
+  }
+  100% {
+    left: 0;
+  }
+}
+.animationv2__container {
+  margin: 3rem 4rem;
+  width: 90vw;
+}
+.animationv2__bar {
+  box-shadow: rgb(188, 113, 236) 0px 0px 30px 1px;
+  border-radius: 50px;
+  background: rgba(197, 143, 233, 0.5);
+  border: 1px solid rgba(197, 143, 233, 0.2);
+  height: 3rem;
+  width: 100%;
+  position: relative;
+}
+.animationv2__ball {
+  aspect-ratio: 1/1;
+  height: 100%;
+  background: rgb(247, 189, 214);
+  border-radius: 50%;
+  position: absolute;
+  animation: ballv2 linear 3s both infinite;
+}
+
+.animationv3__container {
+  margin: 3rem 4rem;
+  width: 90vw;
+}
+.animationv3__bar {
+  box-shadow: rgb(188, 113, 236) 0px 0px 30px 1px;
+  border-radius: 50px;
+  background: rgba(197, 143, 233, 0.5);
+  border: 1px solid rgba(197, 143, 233, 0.2);
+  height: 3rem;
+  width: 100%;
+  position: relative;
+}
+.animationv3__ball {
+  aspect-ratio: 1/1;
+  height: 100%;
+  background: rgb(247, 189, 214);
+  border-radius: 50%;
+  position: absolute;
+  animation: ballv3 linear 3s both infinite;
+}
+
+@keyframes ballv3 {
+  0% {
+    left: 0;
+    transform: scaleX(1) scaleY(1);
+  }
+  5% {
+    left: -1.5rem;
+    transform: scaleX(0.5) scaleY(1);
+  }
+  7% {
+    transform: scaleX(1) scaleY(1);
+  }
+  25% {
+    transform: scaleX(2.5) scaleY(0.2);
+  }
+  43% {
+    transform: scaleX(1) scaleY(1);
+  }
+  45% {
+    left: calc(100% - 1.5rem);
+    transform: scaleX(0.5) scaleY(1);
+  }
+  50% {
+    left: calc(100% - 3rem);
+    transform: scaleX(1) scaleY(1);
+  }
+  55% {
+    left: calc(100% - 1.5rem);
+    transform: scaleX(0.5) scaleY(1);
+  }
+  57% {
+    transform: scaleX(1) scaleY(1);
+  }
+  75% {
+    transform: scaleX(2.5) scaleY(0.2);
+  }
+  92% {
+    transform: scaleX(1) scaleY(1);
+  }
+  95% {
+    left: -1.5rem;
+    transform: scaleX(0.5) scaleY(1);
+  }
+  100% {
+    left: 0;
+    transform: scaleX(1) scaleY(1);
+  }
+}
+body {
+  background-color: #090013;
+  font-family: "poppins";
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.comments {
+  font-size: 3rem;
+  font-style: italic;
+  line-height: 100%;
+  text-align: right;
+  color: rgba(194, 121, 245, 0.5);
+  overflow: hidden;
+}
+.comments p {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1200px) {
+  .comments {
+    font-size: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .comments {
+    font-size: 20px;
+  }
+}
+.animation {
+  box-shadow: rgb(188, 113, 236) 0px 0px 30px 1px;
+  border-radius: 50px;
+  background: rgba(197, 143, 233, 0.5);
+  margin: 3rem 4rem;
+  border: 1px solid rgba(197, 143, 233, 0.2);
+  min-height: 50px;
+  width: 90vw;
+  position: relative;
+}
+
+.animationv2__container {
+  margin: 3rem 4rem;
+  width: 90vw;
+}
+.animationv2__bar {
+  box-shadow: rgb(188, 113, 236) 0px 0px 30px 1px;
+  border-radius: 50px;
+  background: rgba(197, 143, 233, 0.5);
+  border: 1px solid rgba(197, 143, 233, 0.2);
+  height: 3rem;
+  width: 100%;
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */
