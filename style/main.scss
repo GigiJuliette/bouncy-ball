@@ -1,0 +1,63 @@
+@import "./utils/variables";
+@import "./utils/mixin";
+@import "./utils/animations";
+
+@import "./componants/ball";
+@import "./componants/ballv2";
+@import "./componants/ballv3";
+// @import "./componants/text";
+
+body {
+  background-color: $dark-background;
+  font-family: "poppins";
+  @include flex-body;
+}
+
+// comments 
+.comments{
+  font-size: 3rem;
+  font-style: italic;
+  line-height: 100%;
+  text-align:right;
+  color:rgba(194,121,245,.5);
+  overflow:hidden;
+  p {
+    margin:0;
+    padding:0;
+  }
+}
+
+@media (max-width: 1200px){
+  .comments{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 900px){
+  .comments{
+    font-size: 20px;
+  }
+}
+
+// la V1
+.animation {
+  @include highlight-section;
+  position: relative;
+}
+
+// la V2
+.animationv2 {
+  &__container {
+    margin: 3rem 4rem;
+    width: 90vw;
+  }
+
+  &__bar {
+    @include animationv2-bar;
+    position: relative;
+  }
+}
+
+
+
+

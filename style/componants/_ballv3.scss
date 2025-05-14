@@ -1,0 +1,83 @@
+@import "../utils/mixin";
+@import "../utils/animations";
+
+.animationv3 {
+  &__container {
+    margin: 3rem 4rem;
+    width: 90vw;
+  }
+
+  &__bar {
+    @include animationv2-bar;
+    position: relative;
+    // overflow:hidden;
+  }
+
+  &__ball {
+    @include ballv3;
+    animation: ballv3 linear 3s both infinite;
+  }
+}
+
+@keyframes ballv3 {
+  0% {
+    left: 0;
+    transform: scaleX(1) scaleY(1);
+  }
+
+  5% {
+    left: -1.5rem;
+    transform: scaleX(.5) scaleY(1);
+  }
+
+  7% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  25% {
+    transform: scaleX(2.5) scaleY(.2);
+  }
+
+  43% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  45% {
+    left: calc(100% - 1.5rem);
+    transform: scaleX(.5) scaleY(1);
+  }
+
+  50% {
+    left: calc(100% - 3rem);
+    transform: scaleX(1) scaleY(1);
+  }
+
+  55% {
+    left: calc(100% - 1.5rem);
+    transform: scaleX(.5) scaleY(1);
+  }
+
+  57% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  75% {
+    transform: scaleX(2.5) scaleY(.2);
+  }
+
+  92% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  95% {
+    left: -1.5rem;
+    transform: scaleX(.5) scaleY(1);
+  }
+
+  100% {
+    left: 0;
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+// the bouncy effects at 5,45,55,95% sgoudl stay in the bar, can try to change transform:origin ?

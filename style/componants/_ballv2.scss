@@ -1,0 +1,34 @@
+@import "../utils/variables";
+@import "../utils/mixin";
+@import "../utils/animations";
+
+@keyframes ballv2 {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: calc(100% - 3rem);
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.animationv2 {
+  &__container {
+    margin: 3rem 4rem;
+    width: 90vw;
+  }
+
+  &__bar {
+    @include animationv2-bar;
+    position: relative;
+  }
+
+  &__ball {
+    @include ballv2;
+    animation: ballv2 linear 3s both infinite;
+  }
+}

@@ -1,0 +1,67 @@
+@import "../utils/variables";
+@import "../utils/mixin";
+@import "../utils/animations";
+
+.animation {
+  @include highlight-section;
+  position: relative;
+
+  &__ball {
+    @include ball;
+    animation: ball linear 2.5s both infinite;
+  }
+}
+
+@keyframes ball {
+  0% {
+    transform: translateX(0%) scaleX(1) scaleY(1);
+  }
+
+  5% {
+    transform: translateX(-50%)scaleX(.5) scaleY(2);
+  }
+
+  10% {
+    transform: translateX(465%)scaleX(1) scaleY(1);
+  }
+
+  25% {
+    transform: translateX(1550%) scaleX(2.5) scaleY(.2);
+  }
+
+  40% {
+    transform: translateX(2635%)scaleX(1) scaleY(1);
+  }
+
+  45% {
+    transform: translateX(3150%)scaleX(.5) scaleY(2);
+  }
+
+  50% {
+    transform: translateX(3100%)scaleX(1) scaleY(1);
+  }
+
+  55% {
+    transform: translateX(3150%)scaleX(.5) scaleY(2);
+  }
+
+  60% {
+    transform: translateX(2635%)scaleX(1) scaleY(1);
+  }
+
+  75% {
+    transform: translateX(1550%) scaleX(2.5) scaleY(.2);
+  }
+
+  85% {
+    transform: translateX(465%)scaleX(1) scaleY(1);
+  }
+
+  90% {
+    transform: translateX(-50%)scaleX(.5) scaleY(2);
+  }
+
+  100% {
+    transform: translateX(0%)scaleX(1) scaleY(1);
+  }
+}

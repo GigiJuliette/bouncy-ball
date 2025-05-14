@@ -1,0 +1,68 @@
+@import "./variables";
+
+@mixin highlight-section {
+  box-shadow: $dark-secondary 0px 0px 30px 1px;
+  border-radius: 50px;
+  background: rgba(197, 143, 233, 0.5);
+  margin:3rem 4rem;
+  border: 1px solid rgba(197, 143, 233, 0.2);
+  min-height:50px;
+  width:90vw;
+}
+
+@mixin flex-body{
+  padding:1rem;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  gap:2rem;
+}
+
+// la V1
+@mixin ball{
+  width:50px;
+  height:50px;
+  background:$color-primary-light;
+  border-radius:50px;
+  position:absolute;
+  left:0px;
+  top:0px;
+}
+
+// la V2
+@mixin animationv2-bar{
+  box-shadow: $dark-secondary 0px 0px 30px 1px;
+  border-radius: 50px;
+  background: rgba(197, 143, 233, 0.5);
+  border: 1px solid rgba(197, 143, 233, 0.2);
+  height:3rem;
+  width:100%;
+}
+
+@mixin ballv2{
+  aspect-ratio: 1/1;
+  height:100%;
+  background:$color-primary-light;
+  border-radius:50%;
+  position:absolute;
+}
+
+// la V3
+@mixin animationv3-bar{
+  box-shadow: $dark-secondary 0px 0px 30px 1px;
+  border-radius: 50%;
+  background: rgba(197, 143, 233, 0.5);
+  border: 1px solid rgba(197, 143, 233, 0.2);
+  height:3rem;
+  width:100%;
+  // overflow:hidden;
+}
+
+@mixin ballv3{
+  aspect-ratio: 1/1;
+  height:100%;
+  background:$color-primary-light;
+  border-radius:50%;
+  position:absolute;
+}
+
