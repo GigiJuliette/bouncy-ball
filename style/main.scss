@@ -39,25 +39,6 @@ body {
   }
 }
 
-// // la V1
-// .animation {
-//   @include highlight-section;
-//   position: relative;
-// }
-
-// // la V2
-// .animationv2 {
-//   &__container {
-//     margin: 3rem 4rem;
-//     width: 90vw;
-//   }
-
-//   &__bar {
-//     @include animationv2-bar;
-//     position: relative;
-//   }
-// }
-
 
 
 
