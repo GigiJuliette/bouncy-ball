@@ -9,7 +9,6 @@
   &__bar {
     @include animationv2-bar;
     position: relative;
-    // overflow:hidden;
   }
 
   &__ball {
@@ -78,5 +77,3 @@
     transform: scaleX(1) scaleY(1);
   }
 }
-
-// the bouncy effects at 5,45,55,95% sgoudl stay in the bar, can try to change transform:origin ?

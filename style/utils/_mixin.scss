@@ -55,7 +55,6 @@
   border: 1px solid rgba(197, 143, 233, 0.2);
   height:3rem;
   width:100%;
-  // overflow:hidden;
 }
 
 @mixin ballv3{
@@ -66,3 +65,12 @@
   position:absolute;
 }
 
+//laV4
+@mixin animationv4-container{
+  box-shadow: $dark-secondary 0px 0px 30px 1px;
+  border-radius: 20px;
+  background: rgba(197, 143, 233, 0.5);
+  border: 1px solid rgba(197, 143, 233, 0.2);
+  height:3rem;
+  width: 90vw;
+}

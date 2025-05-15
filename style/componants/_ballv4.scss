@@ -1,0 +1,62 @@
+@import "../utils/mixin";
+
+.animationv4 {
+  margin: 3rem 4rem;
+  &__container {
+    @include animationv4-container;
+    display:flex;
+    justify-content: space-around;
+    flex-direction:column;
+  }
+
+  &__bar {
+    position: relative;
+    height:3rem;
+    width:100%;
+  }
+
+  &__ball {
+    @include ballv3;
+    animation: ballv4 linear 3s both infinite;
+    
+  }
+}
+
+@keyframes ballv4 {
+  0% {
+    left: 10%;
+    transform: scaleX(1) scaleY(1);
+  }
+  10%{
+    left: calc(0% - 1.5rem);
+    transform: scaleX(.5) scaleY(1);
+  }
+  25%{
+    transform:scaleX(2.5)scaleY(.2)
+  }
+  40%{
+    left:calc(100% - 1.5rem);
+    transform: scaleX(.5) scaleY(1);
+  }
+  50% {
+    left:calc(90% - 3rem);
+    transform: scaleX(1) scaleY(1);
+  }
+  60%{
+    left:calc(100% - 1.5rem);
+    transform: scaleX(.5) scaleY(1);
+  }
+  75%{
+    transform:scaleX(2.5)scaleY(.2);
+  }
+
+  90%{
+    left: calc(0% - 1.5rem);
+    transform: scaleX(.5) scaleY(1);
+  }
+  
+  100% {
+    left: 10%;
+    transform: scaleX(1) scaleY(1);
+  }
+}

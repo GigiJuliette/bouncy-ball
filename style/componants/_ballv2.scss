@@ -1,20 +1,6 @@
 @import "../utils/variables";
 @import "../utils/mixin";
 
-@keyframes ballv2 {
-  0% {
-    left: 0;
-  }
-
-  50% {
-    left: calc(100% - 3rem);
-  }
-
-  100% {
-    left: 0;
-  }
-}
-
 .animationv2 {
   &__container {
     margin: 3rem 4rem;
@@ -31,3 +17,18 @@
     animation: ballv2 linear 3s both infinite;
   }
 }
+
+@keyframes ballv2 {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: calc(100% - 3rem);
+  }
+
+  100% {
+    left: 0;
+  }
+}
+

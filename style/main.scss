@@ -4,6 +4,7 @@
 @import "./componants/ball";
 @import "./componants/ballv2";
 @import "./componants/ballv3";
+@import "./componants/ballv4";
 // @import "./componants/text";
 
 body {
@@ -19,7 +20,7 @@ body {
   line-height: 100%;
   text-align:right;
   color:rgba(194,121,245,.5);
-  overflow:hidden;
+  // overflow:hidden;
   p {
     margin:0;
     padding:0;
@@ -38,24 +39,24 @@ body {
   }
 }
 
-// la V1
-.animation {
-  @include highlight-section;
-  position: relative;
-}
+// // la V1
+// .animation {
+//   @include highlight-section;
+//   position: relative;
+// }
 
-// la V2
-.animationv2 {
-  &__container {
-    margin: 3rem 4rem;
-    width: 90vw;
-  }
+// // la V2
+// .animationv2 {
+//   &__container {
+//     margin: 3rem 4rem;
+//     width: 90vw;
+//   }
 
-  &__bar {
-    @include animationv2-bar;
-    position: relative;
-  }
-}
+//   &__bar {
+//     @include animationv2-bar;
+//     position: relative;
+//   }
+// }
 
 
 

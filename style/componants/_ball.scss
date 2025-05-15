@@ -1,7 +1,6 @@
 @import "../utils/variables";
 @import "../utils/mixin";
 
-
 .animation {
   @include highlight-section;
   position: relative;

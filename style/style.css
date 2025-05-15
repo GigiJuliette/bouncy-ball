@@ -60,17 +60,6 @@
     transform: translateX(0%) scaleX(1) scaleY(1);
   }
 }
-@keyframes ballv2 {
-  0% {
-    left: 0;
-  }
-  50% {
-    left: calc(100% - 3rem);
-  }
-  100% {
-    left: 0;
-  }
-}
 .animationv2__container {
   margin: 3rem 4rem;
   width: 90vw;
@@ -93,6 +82,17 @@
   animation: ballv2 linear 3s both infinite;
 }
 
+@keyframes ballv2 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% - 3rem);
+  }
+  100% {
+    left: 0;
+  }
+}
 .animationv3__container {
   margin: 3rem 4rem;
   width: 90vw;
@@ -163,6 +163,70 @@
     transform: scaleX(1) scaleY(1);
   }
 }
+.animationv4 {
+  margin: 3rem 4rem;
+}
+.animationv4__container {
+  box-shadow: rgb(188, 113, 236) 0px 0px 30px 1px;
+  border-radius: 20px;
+  background: rgba(197, 143, 233, 0.5);
+  border: 1px solid rgba(197, 143, 233, 0.2);
+  height: 3rem;
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.animationv4__bar {
+  position: relative;
+  height: 3rem;
+  width: 100%;
+}
+.animationv4__ball {
+  aspect-ratio: 1/1;
+  height: 100%;
+  background: rgb(247, 189, 214);
+  border-radius: 50%;
+  position: absolute;
+  animation: ballv4 linear 3s both infinite;
+}
+
+@keyframes ballv4 {
+  0% {
+    left: 10%;
+    transform: scaleX(1) scaleY(1);
+  }
+  10% {
+    left: calc(0% - 1.5rem);
+    transform: scaleX(0.5) scaleY(1);
+  }
+  25% {
+    transform: scaleX(2.5) scaleY(0.2);
+  }
+  40% {
+    left: calc(100% - 1.5rem);
+    transform: scaleX(0.5) scaleY(1);
+  }
+  50% {
+    left: calc(90% - 3rem);
+    transform: scaleX(1) scaleY(1);
+  }
+  60% {
+    left: calc(100% - 1.5rem);
+    transform: scaleX(0.5) scaleY(1);
+  }
+  75% {
+    transform: scaleX(2.5) scaleY(0.2);
+  }
+  90% {
+    left: calc(0% - 1.5rem);
+    transform: scaleX(0.5) scaleY(1);
+  }
+  100% {
+    left: 10%;
+    transform: scaleX(1) scaleY(1);
+  }
+}
 body {
   background-color: #090013;
   font-family: "poppins";
@@ -179,7 +243,6 @@ body {
   line-height: 100%;
   text-align: right;
   color: rgba(194, 121, 245, 0.5);
-  overflow: hidden;
 }
 .comments p {
   margin: 0;
@@ -195,30 +258,6 @@ body {
   .comments {
     font-size: 20px;
   }
-}
-.animation {
-  box-shadow: rgb(188, 113, 236) 0px 0px 30px 1px;
-  border-radius: 50px;
-  background: rgba(197, 143, 233, 0.5);
-  margin: 3rem 4rem;
-  border: 1px solid rgba(197, 143, 233, 0.2);
-  min-height: 50px;
-  width: 90vw;
-  position: relative;
-}
-
-.animationv2__container {
-  margin: 3rem 4rem;
-  width: 90vw;
-}
-.animationv2__bar {
-  box-shadow: rgb(188, 113, 236) 0px 0px 30px 1px;
-  border-radius: 50px;
-  background: rgba(197, 143, 233, 0.5);
-  border: 1px solid rgba(197, 143, 233, 0.2);
-  height: 3rem;
-  width: 100%;
-  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
